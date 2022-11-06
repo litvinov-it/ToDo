@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,regular);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+}
+
+body {
+	font-family: 'Montserrat', 'Arial';
+	font-size: 18px;
+	font-weight: 300;
+	color: #fff;
+}
+
+button {
+	font-family: 'Montserrat', 'Arial';
+	font-size: 18px;
+	font-weight: 300;
+	color: #fff;
+	background-color: inherit;
+}
+
+.material-symbols-outlined:hover {
+	transform: scale(1.2);
+	transition: .2s;
+}
+
+/* ===================== Header ===================== */
+.header {
+	width: 100%;
+	height: 50px;
+	background-color: #3F8FD2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ===================== /Header ===================== */
+
+/* ===================== Main ===================== */
+.main {
+	width: 80%;
+	margin: 20px auto;
+	@media (max-width: 768px) {
+		width: 100%;
+		margin: 0;
+		padding: 10px;
+	}
+
+	&__descForm,
+	&__todo {
+		background-color: #3F8FD2;
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__desc {
+		display: flex;
+		gap: 60px;
+		margin-bottom: 30px;
+		@media (max-width: 768px) {
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	&__form {
+		display: flex;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-weight: 500;
+	}
+
+	&__input {
+		padding: 10px;
+		border: 2px solid white;
+		font-size: 18px;
+		width: 450px;
+		color: #25547B;
+		@media (max-width: 768px) {
+			width: 200px;
+		}
+	}
+
+	&__btn {
+		padding: 10px;
+		border: 2px solid white;
+		font-weight: 400;
+		margin-left: 5px;
+		cursor: pointer;
+	}
+
+	&__todo {
+		margin-top: 30px;
+	}
+}
+
+.todo {
+	&__item {
+		display: flex;
+		width: 500px;
+		justify-content: space-between;
+		padding: 10px;
+		margin-top: 10px;
+		border: 2px solid white;
+		cursor: pointer;
+		animation: todoItem;
+		@media (max-width: 768px) {
+			width: 300px;
+		}
+
+		&:hover {
+			box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.5);
+			transform: scale(1.005);
+			transition: .2s;
+		}
+	}
+
+	&__settings {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: 0px 10px;
+	}
+}
+
+/* ===================== /Main ===================== */
+
+@keyframes todoItem {
+	0% {
+		color: red;
+	}
+	50% {
+		color: blue;
+	}
+	100% {
+		color: #000000;
+	}
+}
